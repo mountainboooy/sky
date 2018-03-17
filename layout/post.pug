@@ -1,0 +1,7 @@
+h1= page.title
+= page.date
+.tags
+each tag in page.tags.data
+  = tag.name + ','
+  
+!=page.content

@@ -1,0 +1,12 @@
+.sidemenu
+  ul.
+    li Home
+    li About
+    li Categories
+
+script.
+  $('.logo').click(toggleMenu)
+  
+  function toggleMenu () {
+    $('.sidemenu').toggleClass('open')
+  }
