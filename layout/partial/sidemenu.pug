@@ -1,0 +1,17 @@
+.sidemenu
+  ul
+    li
+      a(href='/') Home 
+    li
+      a(href='/about') About
+        
+
+script.
+  $(function () {
+    $('.logo').click(toggleMenu)
+    console.log('takeru')
+    
+    function toggleMenu () {
+      $('.sidemenu').toggleClass('open')
+    }
+  })

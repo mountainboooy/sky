@@ -6,6 +6,7 @@ html(lang='ja')
     != css('css/style')
     != js('js/main')
   body
+    != partial('partial/sidemenu')
     header
       a(class='logo')
         <strong>M</strong>
@@ -13,8 +14,3 @@ html(lang='ja')
       !=body
     footer
       | this is footer
-    include _partial/sidemenu.pug
-  
-script.
-  console.log('aaa')
-  console.log(sum(1,2))
