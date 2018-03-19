@@ -6,8 +6,7 @@ each post in page.posts.data
       a(href=url_for(post.path))
         = post.title
     each tag in post.tags.data
-      a(href=url_for(tag.path))
-        = tag.name + ','
+      != partial('partial/tag', {tag: tag})
     each category in post.categories.data
       = category.name + ','
           
