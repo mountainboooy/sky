@@ -1,7 +1,7 @@
 h1 MOUNTAINBOOOY WANDERING
 each post in page.posts.data
   li
-    = post.date
+    = date(post.date, 'YYYY.M.D')
     h3
       a(href=url_for(post.path))
         = post.title
