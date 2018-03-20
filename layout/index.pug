@@ -1,21 +1,5 @@
 h1 MOUNTAINBOOOY WANDERING
-each post in page.posts.data
-  li
-    = date(post.date, 'YYYY.M.D')
-    h3
-      a(href=url_for(post.path))
-        = post.title
-    each tag in post.tags.data
-      != partial('partial/tag', {tag: tag})
-    each category in post.categories.data
-      = category.name + ','
-          
-
-if page.prev_link
-  a(href=url_for(page.prev_link)) Prev
-strong= page.current
-if page.next_link
-  a(href=url_for(page.next_link)) Next
+!=partial('./partial/archive', {page: page})
 
 .profile
   img(src='https://i.gyazo.com/13a3f490a5a42074ffdb1722d8a38c3d.jpg')

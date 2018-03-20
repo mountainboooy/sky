@@ -1,0 +1,10 @@
+.arcive
+  each post in page.posts.data
+    li.unstyled-list
+      != partial('./summary', {post: post})
+      
+  if page.prev_link
+    a(href=url_for(page.prev_link)) Prev
+  strong= page.current
+  if page.next_link
+    a(href=url_for(page.next_link)) Next
