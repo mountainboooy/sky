@@ -1,7 +1,18 @@
-h1= page.title
-= page.date
-.tags
-each tag in page.tags.data
-  = tag.name + ','
+.container
   
-!=page.content
+  //title
+  h1= page.title
+  
+  // date
+  != partial('./partial/date', {created: page.date})
+  
+  // tags
+  .tags
+  each tag in page.tags.data
+    != partial('./partial/tag', {tag: tag})
+  
+  // article
+  != partial('./partial/article', {content: page.content})
+  
+  //profile
+  != partial('./partial/profile')
