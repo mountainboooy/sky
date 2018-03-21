@@ -1,0 +1,8 @@
+if direction === 'prev' && page.prev_link
+  a.unstyled-link.page-nav-link(href=url_for(page.prev_link))
+    img(src='/img/arrow_prev.svg')
+    span= title 
+if direction === 'next' && page.next_link
+  a.unstyled-link.page-nav-link(href=url_for(page.next_link))
+    span= title
+    img(src='/img/arrow_next.svg')

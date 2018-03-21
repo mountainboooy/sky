@@ -2,9 +2,5 @@
   each post in page.posts.data
     li.unstyled-list
       != partial('./summary', {post: post})
-      
-  if page.prev_link
-    a.btn.btn-default(href=url_for(page.prev_link)) Prev
-  strong= page.current
-  if page.next_link
-    a.btn.btn-default(href=url_for(page.next_link)) Next
+    
+  != partial('./page-nav', {page: page})
