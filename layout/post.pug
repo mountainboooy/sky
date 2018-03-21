@@ -1,18 +1,15 @@
-.container
-  
-  //title
-  h1= page.title
-  
-  // date
-  != partial('./partial/date', {created: page.date})
-  
-  // tags
-  .tags
-  each tag in page.tags.data
-    != partial('./partial/tag', {tag: tag})
-  
-  // article
-  != partial('./partial/article', {content: page.content})
-  
-  //profile
-  != partial('./partial/profile')
+.post
+  .container
+    // date
+    != partial('./partial/created', {created: page.date})
+    
+    //title
+    h1.post-title= page.title
+    
+    // tags
+    .post-tags
+      each tag in page.tags.data
+        != partial('./partial/tag', {tag: tag, class_name: 'post-tag'})
+    
+    // article
+    != partial('./partial/article', {content: page.content})
