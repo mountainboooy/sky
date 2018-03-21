@@ -2,11 +2,15 @@
   padding: 20px;
   cursor: pointer;
 
-  &-tag {
-    margin: 0 4px;
+  &-tags {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 0 -4px;
   }
 
-  &:hover {
-    background: rgba(#000, .05);
+  &-tag {
+    margin: 4px;
   }
 }
