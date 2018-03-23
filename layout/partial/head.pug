@@ -1,0 +1,25 @@
+head
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1')  
+  title= page.title  
+  if theme.favicon
+    link(rel='icon' href=theme.favicon)
+  
+  // javascript
+  script(src='https://code.jquery.com/jquery-3.3.1.min.js' integrity='sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=' crossorigin='anonymous')
+  != js('js/main')
+  != css('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css')
+  
+  // Google Analytics
+  // Global site tag (gtag.js)
+  script(async src='https://www.googletagmanager.com/gtag/js?id=UA-41355170-3')
+  script.
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-41355170-3');
+  
+  //css
+  != css('css/style')
+  != css('https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i|Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,400,500,700,900')
+  
