@@ -1,9 +1,10 @@
 .sidemenu
-  ul
+  .backdrop
+  ul.unstyled-list.sidemenu-list
     li
-      a(href='/') Home 
+      a.unstyled-link(href='/') Home 
     li
-      a(href='/about') About
+      a.unstyled-link(href='/about') About
   = console.log(site.categories)
   //- let categories = site.categories.data
   //- categories = categories.filter (function (elem, index, arr) {return arr.indexOf(elem) ===index})
@@ -12,10 +13,34 @@
 
 script.
   $(function () {
-    $('.logo').click(toggleMenu)
-    console.log('takeru')
-    
-    function toggleMenu () {
-      $('.sidemenu').toggleClass('open')
-    }
+    $('.logo').click(toggleMenu)    
+    $('.sidemenu').click(toggleMenu)
   })
+  
+  function toggleMenu () {
+    if (isShown()) {
+      closeMenu()
+    } else {
+      openMenu()
+    }
+  }
+  
+  function isShown () {
+    return $('.sidemenu').css('display') === 'block'
+  }
+  
+  function openMenu () {
+    $('.sidemenu').show()
+    setTimeout(function () {
+      $('.backdrop').addClass('open')
+      $('.sidemenu-list').addClass('open')
+    }, 100)
+  }
+  
+  function closeMenu () {
+    $('.sidemenu-list').removeClass('open')
+    $('.backdrop').removeClass('open')
+    setTimeout(function () {
+      $('.sidemenu').hide()
+    }, 300)
+  }
