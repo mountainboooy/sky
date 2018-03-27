@@ -1,4 +1,4 @@
-H1= page.tag
-
-each post in page.posts.data
-  li= post.title
+.tag 
+  .container
+    H1.tag-title= page.tag
+    != partial('./partial/archive', {page: page})
