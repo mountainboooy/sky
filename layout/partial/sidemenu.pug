@@ -2,9 +2,9 @@
   .backdrop
   ul.unstyled-list.sidemenu-list
     li
-      a.unstyled-link(href='/') Home 
+      a.unstyled-link(href=url_for('/')) Home 
     li
-      a.unstyled-link(href='/about') About
+      a.unstyled-link(href=url_for('/about')) About
   //- let categories = site.categories.data
   //- categories = categories.filter (function (elem, index, arr) {return arr.indexOf(elem) ===index})
 
