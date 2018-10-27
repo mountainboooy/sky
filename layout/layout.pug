@@ -1,10 +1,9 @@
 doctype html
 html(lang='ja')
-  != partial('./partial/head')
   body
-    != partial('./partial/sidemenu')
-    != partial('./partial/header')
+    .content
+      .content-nav
+        != partial('./partial/sidenav')
+      .content-main  
     .body  
       !=body
-    != partial('/partial/profile')
-    != partial('./partial/footer')  

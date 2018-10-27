@@ -71,11 +71,35 @@ pre {
 }
 
 .unstyled-link {
-  color: inherit;
   text-decoration: none;
 }
 
 .unstyled-list {
   list-style: none;
   margin: 0;
+  padding: 0;
+}
+
+.unstyled-link {
+  text-decoration: none;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.content {
+  width: 100%;
+  display: flex;
+
+  &-nav {
+    width: 16rem;
+    height: 100vh;
+    background: blue;
+  }
+
+  &-main {
+    flex-grow: 1;
+    background: red;
+  }
 }
