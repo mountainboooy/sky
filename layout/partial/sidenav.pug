@@ -1,10 +1,13 @@
 .sidenav
-  ul.unstyled-list.sidenav-menu
-    li.sidenav-menu-item
-      a.unstyled-link(href=url_for('/')) Home 
-    li.sidenav-menu-item
-      a.unstyled-link(href=url_for('/about')) About
-    li.sidenav-menu-item
-      a.unstyled-link(href=url_for('/about')) Categories
-      
+  .sidenav__header
+    | m
+  ul.unstyled-list.sidenav__menu
+    - const menus = [{path: '/', title: 'BLOG'},{path: '/about', title: 'PROFILE'},{path: '/works', title: 'WORKS'}]
+    each menu in menus
+      - const val = 1
+        li.sidenav__menu__item
+          a.unstyled-link(href=url_for(menu.path), class = is_current(menu.path) ? 'selected' : '')
+            != menu.title
+          .sidenav__menu__item__marker(class = is_current(menu.path) ? 'selected' : '')
+  .sidenav__divider
   != partial('./profile')
