@@ -1,27 +1,16 @@
-header {
-  height: 56px;
+.header {
+  padding: 0 2.5rem;
+  line-height: 4rem;
   display: flex;
 
-  .container {
-    width: 100%;
-    height: 100%;
-    justify-content: flex-start;
-    align-items: center;
+  &__main-title {
+    font-size: 21px;
+    line-height: 4rem;
+    font-weight: bold;
   }
 
-  .logo {
-    display: inline-block;
-    text-align: center;
-    font-size: 27px;
-    line-height: 48px;
-    height: 48px;
-    width: 48px;
-    margin-left: -12px;
-    cursor: pointer;
-
-
-    &-text {
-      border-bottom: 4px solid secondary-color;
-    }
+  &__sub-title {
+    font-weight: bold;
+    margin-left: 1rem;
   }
 }
