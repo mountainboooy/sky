@@ -1,8 +1,4 @@
 .page-nav
   != partial('./page-nav-link', {direction: 'prev', title: 'PREV', page: page})
-  
-  .page-nav-current
-    span PAGE 
-    span.page-nav-current-num= page.current
 
   != partial('./page-nav-link', {direction: 'next', title: 'NEXT', page: page})

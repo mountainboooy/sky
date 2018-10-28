@@ -3,5 +3,6 @@
     each post in page.posts.data
       li
         != partial('./summary', {post: post})
-    
-  != partial('./page-nav', {page: page})
+  
+  .archive__page-nav  
+    != partial('./page-nav', {page: page})
