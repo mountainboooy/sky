@@ -1,13 +1,35 @@
 .summary {
-  padding: 16px 0 20px;
+  padding: .5rem 0 3rem;
   cursor: pointer;
-  border-top: 1px solid #f1f1f1;
+  border-top: 1px solid splitter-color-dark;
 
-  &-title {
-    margin: 8px 0 12px;
+  &__title {
+    margin: 24px 0 12px;
+    min-height: 4.5rem;
+
+    a {
+      color: primary-color-dark;
+
+      &:hover {
+        color: text-link-color-hovered;
+      }
+    }
   }
 
-  &-tags {
+  &__desc {
+    max-height: 4.5rem;
+    margin: .75rem 0 1.5rem;
+    //text-ellipsis();
+    overflow: hidden;
+
+    * {
+      margin: 0 !important;
+      font-size: $base-font-size !important;
+      font-weight: normal !important;
+    }
+  }
+
+  &__tags {
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;

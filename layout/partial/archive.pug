@@ -1,6 +1,7 @@
-.arcive
-  each post in page.posts.data
-    li.unstyled-list
-      != partial('./summary', {post: post})
+.archive
+  ul.unstyled-list
+    each post in page.posts.data
+      li
+        != partial('./summary', {post: post})
     
   != partial('./page-nav', {page: page})

@@ -1,0 +1,21 @@
+.archive {
+  padding: 0 2.5rem;
+
+  > ul {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 2.5rem;
+
+    > li {
+      grid-column: span 4;
+
+      +responsive(xl) {
+        grid-column: span 3;
+      }
+
+      +responsive(md) {
+        grid-column: span 6;
+      }
+    }
+  }
+}
