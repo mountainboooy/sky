@@ -14,5 +14,8 @@
     // article
     != partial('./partial/article', {content: page.content})
     
+    // related posts
+    != popular_posts({maxCount: 12, isDate: true, isExcerpt: true}, page)
+    
   // footer
   != partial('./partial/footer')
