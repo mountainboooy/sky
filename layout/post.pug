@@ -14,8 +14,13 @@
     // article
     != partial('./partial/article', {content: page.content})
     
+    h3 RELATED POSTS
     // related posts
-    != popular_posts({maxCount: 12, isDate: true, isExcerpt: true}, page)
+    != popular_posts({maxCount: 12, isDate: true, isExcerpt: true, PPMixingRate: 0 }, page)
+    
+    h3 POPULAR POSTS
+    // popular posts
+    != popular_posts({maxCount: 12, isDate: true, isExcerpt: true, PPMixingRate: 1.0 }, page)
     
   // footer
   != partial('./partial/footer')
