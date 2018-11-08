@@ -96,18 +96,46 @@ pre {
   text-align: center;
 }
 
+.hidden-xs {
+  display: block;
+
+  +responsive(xs) {
+    display: none;
+  }
+}
+
+.visible-xs {
+  display: none;
+
+  +responsive(xs) {
+    display: block;
+  }
+}
+
 .content {
   width: 100%;
   display: flex;
+
+  +responsive(xs) {
+    display: block;
+  }
 
   &-nav {
     width: 16rem;
     height: 100vh;
     background: blue;
     flex-shrink: 0;
+
+    +responsive(xs) {
+      display: none;
+    }
   }
 
   &-main {
     flex-grow: 1;
+
+    +responsive(xs) {
+      width: 100%;
+    }
   }
 }

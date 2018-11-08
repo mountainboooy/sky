@@ -1,0 +1,53 @@
+.hero {
+  padding-top: 108%;
+  position: relative;
+  background: primary-color-dark;
+  color: #fff;
+
+  &__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+  }
+
+  &__header {
+    height: 3.75rem;
+    flex-basis: 3.75rem;
+    display: flex;
+    align-items: center;
+    padding: 0 .25rem;
+  }
+
+  &__btn {
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-appearance: none;
+    border: 0;
+  }
+
+  &__logo {
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Righteous';
+    font-size: 128px;
+  }
+
+  &__footer {
+    padding-bottom: 1.75rem;
+
+    h4 {
+      margin-bottom: 0.25rem;
+    }
+  }
+}
