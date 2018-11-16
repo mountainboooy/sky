@@ -4,6 +4,10 @@
   grid-template-columns: repeat(12, 1fr);
   grid-column-gap: 40px;
 
+  +responsive(xs) {
+    display: block;
+  }
+
   .container {
     max-width: 720px;
 
@@ -16,10 +20,6 @@
     +responsive(sm) {
       grid-column: 2 / span 10;
     }
-
-    +responsive(xs){
-      grid-column: 1 / span 12;
-      }
   }
 
   footer {
@@ -49,10 +49,19 @@
     grid-template-columns: repeat(12, 1fr);
     grid-column-gap: 40px;
 
+    +responsive(xs) {
+      grid-template-columns: repeat(4, 1fr);
+      grid-column-gap: 16px;
+    }
+
     &-item {
       grid-column: span 6;
       border-top: 1px solid splitter-color-dark;
       padding: .5rem 0 3rem;
+
+      +responsive(xs) {
+        grid-column: span 2;
+      }
     }
 
     &-date {
