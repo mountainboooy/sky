@@ -10,7 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "hexo-related-popular-posts": "^3.0.3",
-    "jquery": "^3.3.1",
+    "jquery": "^3.5.0",
     "normalize-styl": "^4.1.1"
   }
 }
