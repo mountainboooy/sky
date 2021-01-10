@@ -1,0 +1,116 @@
+body {
+  font-size: base-font-size;
+  line-height: base-line-height;
+  word-break: break-word;
+  font-family: ja-font-family;
+  color: text-color;
+  -webkit-font-smoothing: antialiased;
+}
+
+html[lang^="ja"] body,
+html[lang^="zh"] body,
+html[lang^="ko"] body {
+  line-break: strict;
+  word-break: break-all;
+}
+
+/* Paragraphs */
+
+p {
+  font-size: 1rem;
+  margin: 0 0 2rem;
+}
+
+/* Anchors */
+
+a {
+  cursor: pointer;
+  text-decoration: underline;
+  color: link-color;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+  color: link-hover-color;
+}
+
+/* Headings */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: heading-font-weight;
+}
+
+h1 {
+  font-size: h1-font-size;
+  line-height: h1-line-height;
+  margin: 1rem 0;
+
+  +responsive(xs){
+    font-size: calc(h1-font-size * 0.56);
+  }
+}
+
+h2 {
+  font-size: h2-font-size;
+  line-height: h2-line-height;
+  margin: 4rem 0 3rem;
+}
+
+h3 {
+  font-size: h3-font-size;
+  line-height: h3-line-height;
+  margin: 2rem 0;
+}
+
+h4 {
+  font-size: h4-font-size;
+  line-height: h4-line-height;
+  margin: 0;
+}
+
+/* Lists */
+
+ul,
+ol {
+  margin: 0 0 2rem;
+}
+
+ul ul,
+ol ul,
+ul ol,
+ol ol {
+  margin: 0;
+}
+
+ul.no-list {
+  list-style: none;
+}
+
+/* Code blocks */
+
+code {
+  vertical-align: bottom;
+}
+
+/* Blockquotes */
+
+blockquote {
+  border-left: 2px solid;
+  margin: 0 0 1rem;
+  padding-left: 1rem;
+}
+
+/* Horizontal rules */
+
+hr {
+  background-color: border-color;
+  border: none;
+  color: border-color;
+  height: 1px;
+}
