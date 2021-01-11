@@ -4,16 +4,19 @@
       img
       .header__brand__name
         | mountainboooy
-      .header__brand__tagline.hidden-xs
+      .header__brand__tagline.hidden-xs.hidden-sm
         | - 自由に綴る外遊びの記録 -
-        
-    .header__menu
-      a.header__menu-item
-        | this is item
-      a.header__menu-item
-        | this is item
-    .header__social-buttons
-      a.icon-button.icon-button--dark
-        | h
-      a.icon-button.icon-button--dark
-        | h    
+    
+    .header__collapse  
+      .header__menu
+        a.header__menu-item
+          | About
+      .header__socials
+        .header__socials__item
+          a.icon-button.icon-button--dark
+            | h
+        .header__socials__item  
+          a.icon-button.icon-button--dark
+            | h    
+    button.header__toggle
+      img
