@@ -3,6 +3,8 @@ html(lang='ja')
   != partial('./partial/head')
   body
     .content
-      .content-main
-        !=body
-    != partial('./partial/xs/drawer')
+      != partial('./partial/header')
+      .container
+        | this is container
+
+      != partial('./partial/footer')
