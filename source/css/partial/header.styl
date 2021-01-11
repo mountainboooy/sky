@@ -1,20 +1,36 @@
 .header {
-  padding: 0 3rem;
-  line-height: 4rem;
-  display: flex;
+  border-top: 6px solid gray-dark;
+  border-bottom: 1px solid border-color;
+  height: 71px;
 
-  +responsive(xs) {
-    display: none;
+  > .container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
-  &__main-title {
-    font-size: 21px;
-    line-height: 4rem;
-    font-weight: bold;
-  }
+  &__brand {
+      height: 100%;
+      display: inline-flex;
+      align-items: center;
 
-  &__sub-title {
-    font-weight: bold;
-    margin-left: 1rem;
+    > img {
+      width: 3rem;
+      height: 3rem;
+      background: black;
+      border-radius: 50%;
+    }
+
+    &__name {
+      margin-left: 1rem;
+      font-family: en-font-family;
+      font-weight: 500;
+    }
+
+    &__tagline {
+      margin-left: 6px;
+      font-size: small-font-size;
+    }
   }
 }
