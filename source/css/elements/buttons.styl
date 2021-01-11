@@ -1,0 +1,34 @@
+button {
+  border: none;
+}
+
+.icon-button {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background: icon-button-hover-bg;
+    color: #fff;
+  }
+
+  &:active {
+    background: icon-button-active-bg;
+    color: #fff;
+  }
+}
+
+.icon-button--dark {
+  background: icon-button-dark-bg;
+  color: icon-button-dark-color;
+}
+
+.icon-button--light {
+  background: icon-button-light-bg;
+  color: icon-button--color;
+}

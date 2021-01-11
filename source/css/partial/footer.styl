@@ -1,7 +1,21 @@
-footer {
-  height: 6rem;
-  line-height: 6rem;
-  text-align: center;
-  color: text-color-dark-weak;
-  border-top: 1px solid splitter-color-dark;
+.footer {
+  background: footer-bg;
+
+  &__upper-row {
+    padding: 3rem 0 2rem;
+    text-align: center;
+    border-bottom: 1px solid footer-border-color;
+  }
+
+  &__bottom-row {
+    height:  4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__copywrite {
+    font-size: font-size-small;
+    color: footer-color;
+  }
 }
