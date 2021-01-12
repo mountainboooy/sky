@@ -1,4 +1,4 @@
-.header
+.header#header
   .container
     .header__brand
       img(src='img/logo.svg')
@@ -7,8 +7,10 @@
       .header__brand__tagline.hidden-xs.hidden-sm
         | - 自由に綴る外遊びの記録 -
     
-    .header__collapse  
+    .header__collapse#header__collapse 
       .header__menu
+        a.header__menu-item
+          | About
         a.header__menu-item
           | About
       .header__socials
@@ -18,5 +20,5 @@
         .header__socials__item  
           a.icon-button.icon-button--dark
             img(src='img/instagram_light.svg')
-    button.header__toggle
-      img(src='img/list.svg')
+    button.header__toggle#header__toggle
+      .header__toggle-img
