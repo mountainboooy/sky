@@ -1,29 +1,35 @@
 .header {
   border-top: 6px solid gray-dark;
-  border-bottom: 1px solid border-color;
-  height: 71px;
+
+  +responsive-over(sm) {
+    border-bottom: 1px solid border-color;
+  }
 
   > .container {
-    height: 100%;
+    height: 4rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    +responsive(xs) {
+      padding: 0 12px;
+    }
   }
 
-    &:before {
-      content: '';
-      position: fixed;
-      top: 71px;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: red;
-      display: none;
+  &:before {
+    content: '';
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(gray-dark, 70%);
+    display: none;
 
-      +responsive(xs) {
-        display: block;
-      }
+    +responsive(xs) {
+      display: block;
     }
+  }
 
   &__brand {
       height: 100%;
@@ -33,12 +39,16 @@
     > img {
       width: 3rem;
       height: 3rem;
-      background: black;
-      border-radius: 50%;
+
+      +responsive(xs) {
+        width: 40px;
+        height: 40px;
+      }
     }
 
     &__name {
-      margin-left: 1rem;
+      margin-left: 12px;
+      letter-spacing: .6px;
       font-family: en-font-family;
       font-weight: 500;
     }
@@ -55,14 +65,14 @@
     align-items: center;
 
     +responsive(xs) {
+      border-top: 2px solid border-color;
       position: absolute;
-      top: 71px;
+      top: 70px;
       left: 0;
       right: 0;
       background: #fff;
       flex-direction: column;
       height: auto;
-      border-top: 2px solid border-color;
     }
   }
 
@@ -106,7 +116,10 @@
     display: inline-flex;
     align-items: center;
     height: 100%;
-    margin-left: 10px;
+
+    +responsive-over(sm) {
+      margin-left: 10px;
+    }
 
     +responsive(xs) {
       flex-direction: column;
@@ -118,7 +131,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 5px;
+
+    +responsive-over(sm) {
+      margin: 0 4px;
+    }
 
     +responsive(xs) {
       width: 100%;
@@ -129,17 +145,29 @@
 
   &__toggle {
     display: none;
+    background: button-bg-default;
+    outline: none;
+
+    &:focus {
+      background: button-bg-default;
+    }
+
+    &:hover,
+    &:active {
+      background: button-active-bg-default;
+    }
 
     +responsive(xs) {
-      display: block;
+      display: flex;
       width: 2.5rem;
       height: 2.5rem;
+      justify-content: center;
+      align-items: center;
     }
 
     img {
-      width: 100%;
-      height: 100%;
-      background: red;
+      width: 1.5rem;
+      height: 1.5rem;
     }
   }
 }

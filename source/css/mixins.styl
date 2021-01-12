@@ -1,3 +1,27 @@
+responsive-over(size) {
+  if (size == 'sm') {
+    @media(min-width: screen-sm) {
+      {block}
+    }
+  } else if (size == 'md') {
+    @media(min-width: screen-md) {
+      {block}
+    }
+  } else if (size == 'lg') {
+    @media(min-width: screen-lg) {
+      {block}
+    }
+  } else if (size == 'xl') {
+    @media(min-width: screen-xl) {
+      {block}
+    }
+  } else if (size == 'xll') {
+    @media(min-width: screen-xll) {
+      {blck}
+    }
+  }
+}
+
 responsive(size) {
   if (size == 'xs') {
     @media(max-width: screen-sm - 1) {
