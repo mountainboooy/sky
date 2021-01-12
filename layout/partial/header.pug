@@ -1,7 +1,7 @@
 .header#header
   .container
-    .header__brand
-      img(src='img/logo.svg')
+    a.header__brand.unstyled-link(href='/')
+      img(src='/img/logo.svg')
       .header__brand__name
         | mountainboooy
       .header__brand__tagline.hidden-xs.hidden-sm
@@ -9,16 +9,14 @@
     
     .header__collapse#header__collapse 
       .header__menu
-        a.header__menu-item
-          | About
-        a.header__menu-item
+        a.header__menu-item(href='/about/')
           | About
       .header__socials
         .header__socials__item
-          a.icon-button.icon-button--dark
-            img(src='img/twitter_light.svg')
+          a.icon-button.icon-button--dark(href='https://twitter.com/mountainboooy' target='_blank' rel='noopener')
+            img(src='/img/twitter_light.svg')
         .header__socials__item  
-          a.icon-button.icon-button--dark
-            img(src='img/instagram_light.svg')
+          a.icon-button.icon-button--dark(href='https://www.instagram.com/takeru80/' target='_blank' rel='noopener')
+            img(src='/img/instagram_light.svg')
     button.header__toggle#header__toggle
       .header__toggle-img
