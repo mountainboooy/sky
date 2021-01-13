@@ -1,16 +1,20 @@
 .summary {
   width: 100%;
+  height: 100%;
   border: 1px solid border-color;
   display: flex;
   flex-direction: column;
+  text-decoration: none;
+  transition: .15s;
+
 
   &__title {
-    margin: 0;
-    font-size: 18px;
-    line-height: 2rem;
-    min-height: 4rem;
+    color: text-color;
+    margin: 14px 0 0;
+    font-size: 17px;
+    line-height: 1.75rem;
     display: -webkit-box;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
@@ -38,26 +42,37 @@
   }
 
   &__body {
-    padding: 16px 20px;
+    padding: 14px 20px;
   }
 
   &__date {
     font-size: 1rem;
-    line-height: 2rem;
+    line-height: 1.75rem;
     color: gray;
-    font-weight: 500;
+    font-weight: 600;
     font-family: en-font-family;
   }
 
-  &:hover {
-    border-color: primary-color;
-
-    .summary__title {
-      color: primary-color;
-    }
-
-    .summary__date {
-      color: primary-color;
-    }
+  &__tags {
+    margin-top: 14px;
+    line-height: 21px;
+    color: gray;
   }
+
+  &__tag {
+    font-size: 12px;
+    font-weight: 600;
+    margin-right: 10px;
+  }
+
+    &:hover {
+      box-shadow: 0 0 12px rgba(gray,  30%);
+      text-decoration: none;
+
+      .summary__title,
+      .summary__date,
+      .summary__tags {
+        color: primary-color;
+      }
+    }
 }

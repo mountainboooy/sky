@@ -1,7 +1,13 @@
-a.unstyled-link.summary(href=url_for(post.path))
+a.summary(href=url_for(post.path))
   .summary__thumbnail
     img(src=post.thumbnail)
   .summary__body
     .summary__date
       = date(post.date, 'YYYY.M.D')
     h3.summary__title= post.title
+    if post.tags.length > 0
+      .summary__tags 
+        each tag in post.tags.data
+          span.summary__tag
+            | #
+            = tag.name

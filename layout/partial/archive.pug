@@ -1,5 +1,5 @@
-.archive
-  ul.unstyled-list
+ul.archive
+  ul.unstyled-list.archive__grid
     each post in page.posts.data
       li
         != partial('./summary', {post: post})
