@@ -56,3 +56,20 @@ text-ellipsis() {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+
+unstyled-list() {
+  list-style: none;
+  padding: 0;
+}
+
+unstyled-link() {
+  color: inherit;
+  text-decoration: none;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: inherit;
+    text-decoration: none;
+  }
+}

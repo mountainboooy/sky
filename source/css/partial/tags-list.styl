@@ -1,0 +1,43 @@
+.tag-list {
+  +unstyled-list(){}
+}
+
+.tag-list-item {
+  height: 49px;
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 6px;
+  font-size: small-font-size;
+
+  &:not(:last-of-type) {
+    border-bottom: 1px solid border-color;
+  }
+
+  &::marker {
+    none;
+  }
+}
+
+.tag-list-link {
+  flex-grow: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  +unstyled-link() {}
+
+  &:hover {
+    color: button-hover-bg-primary;
+  }
+}
+
+.tag-list-count {
+  &:before {
+    content:'(';
+  }
+
+  &:after {
+    content:')';
+  }
+}

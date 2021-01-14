@@ -1,2 +1,7 @@
 .container
-  != partial('./partial/archive', {page: page})
+  .col
+    .main-col
+      != partial('./partial/archive', {page: page})
+    .side-col
+      != partial('./partial/popular-posts', {page: page})
+      != partial('./partial/tags-list')
