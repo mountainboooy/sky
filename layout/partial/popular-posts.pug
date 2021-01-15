@@ -1,4 +1,3 @@
 div
-  | this is popuar posts
-
-  != popular_posts({maxCount: 12, isDate: true, isExcerpt: true, PPMixingRate: 0 }, page)
+  h3.side-col__title POPULAR POSTS
+  != popular_posts({maxCount: 5, isDate: true, isImage: true, isExcerpt: false, PPMixingRate: 1.0 })

@@ -36,7 +36,8 @@ html {
   }
 
   +responsive(sm) {
-    max-width: 540px;
+    max-width: 100%;
+    padding: 0 1.5rem;
   }
 
   +responsive(xs) {
@@ -48,11 +49,15 @@ html {
 .col {
   width: 100%;
   display: grid;
-  grid-column-gap: 2.5rem;
+  grid-column-gap: 1.5rem;
   grid-template-columns: 8fr 4fr;
 
   +responsive(xs) {
     grid-template-columns: 1fr;
+  }
+
+  +responsive(xll) {
+    grid-template-columns: 9fr 3fr;
   }
 }
 
@@ -64,6 +69,14 @@ html {
     color: primary-color;
     font-family: en-font-family;
     font-size: 22px;
-    margin: 1.5rem 0;
+    margin: 1.5rem 0 1rem;
+  }
+
+  +responsive-over(lg) {
+    padding-left: 1.5rem;
+  }
+
+  > *:not(:last-child) {
+    margin-bottom: 3rem;
   }
 }
