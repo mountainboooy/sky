@@ -19,9 +19,7 @@
       .post-col     
         // article
         != partial('./partial/article', {content: page.content})      
-        h3 RELATED POSTS
-        // related posts
-        != popular_posts({maxCount: 12, isDate: true, isExcerpt: true, PPMixingRate: 0 }, page)
+        != partial('./partial/related-posts', {page: page} )
     .side-col
       != partial('./partial/popular-posts', {page: page})
       != partial('./partial/tags-list')
