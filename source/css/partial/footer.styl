@@ -2,9 +2,29 @@
   background: footer-bg;
 
   &__upper-row {
-    padding: 3rem 0 2rem;
-    text-align: center;
+    padding: 2.5rem 0 2rem;
+    display: flex;
+    justify-content: center;
     border-bottom: 1px solid footer-border-color;
+  }
+
+  &__logo {
+    +unstyled-link(){}
+    width: 200px;
+    cursor: pointer;
+    display: block;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__tagline {
+    color: #fff;
+    font-size: small-font-size;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 0.5rem;
   }
 
   &__bottom-row .container {
