@@ -1,6 +1,51 @@
+
 .page-nav {
+  --button-size: 56px;
+  margin-top: 4rem;
   display: flex;
-  justify-content: space-between;
-  line-height: 3rem;
-  font-size: 21px;
+  justify-content: center;
+
+  +responsive(xs) {
+    --button-size: 48px;
+  }
+}
+
+.page-nav__button {
+  +unstyled-link(){}
+  font-size: 18px;
+  font-weight: bold;
+  width: var(--button-size);
+  height: var(--button-size);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transition: .15s;
+
+  &:hover {
+    background: gray-light;
+  }
+
+  &:active {
+    background: darken(gray-light, 10%);
+  }
+
+  &.current {
+    background: primary-color;
+    color: #fff;
+    pointer-events: none;
+  }
+}
+
+.page-nav__kebab {
+  width: var(--button-size);
+  height: var(--button-size);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: bottom;
+
+  > img {
+    width: 24px;
+    height: 24px;
+  }
 }

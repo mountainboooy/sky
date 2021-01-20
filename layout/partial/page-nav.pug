@@ -1,4 +1,90 @@
 .page-nav
-  != partial('./page-nav-link', {direction: 'prev', title: 'PREV', page: page})
-
-  != partial('./page-nav-link', {direction: 'next', title: 'NEXT', page: page})
+  if (page.current ===  1)
+    a.page-nav__button.current
+      | 1
+    if (page.total > 1)
+      a.page-nav__button(href=url_for('/page/2'))
+        | 2
+    if (page.total > 2)
+      a.page-nav__button(href=url_for('/page/3'))
+        | 3
+    if (page.total > 4)
+      .page-nav__kebab
+        img(src='/img/kebab-horizontal.svg')
+    if (page.total > 3)
+      a.page-nav__button(href=url_for(`/page/${page.total}`))
+        = page.total
+  else if (page.current === 2)
+    a.page-nav__button(href=url_for('/'))
+      | 1
+    a.page-nav__button.current
+      | 2
+    a.page-nav__button(href=url_for('/page/3'))
+      | 3
+    .page-nav__kebab
+      img(src='/img/kebab-horizontal.svg')
+    a.page-nav__button(href=url_for(`/page/${page.total}`))
+      = page.total
+  else if (page.current === 3)
+    a.page-nav__button(href=url_for('/'))
+      | 1
+    a.page-nav__button(href=url_for('/page/2'))
+      | 2
+    a.page-nav__button.current
+      | 3
+    a.page-nav__button(href=url_for('/page/4'))
+      | 4
+    .page-nav__kebab
+      img(src='/img/kebab-horizontal.svg')
+    a.page-nav__button(href=url_for(`/page/${page.total}`))
+      = page.total
+  else if (page.current === page.total - 2)
+    a.page-nav__button(href=url_for('/'))
+      | 1
+    .page-nav__kebab
+      img(src='/img/kebab-horizontal.svg')
+    a.page-nav__button(href=url_for(`/page/${page.current - 1}`))
+      = page.current - 1
+    a.page-nav__button.current
+      = page.current
+    a.page-nav__button(href=url_for(`/page/${page.current + 1}`))
+      = page.current + 1
+    a.page-nav__button(href=url_for(`/page/${page.total}`))
+      = page.total
+  else if (page.current === page.total - 1)
+    a.page-nav__button(href=url_for('/'))
+      | 1
+    .page-nav__kebab
+      img(src='/img/kebab-horizontal.svg')
+    a.page-nav__button(href=url_for(`/page/${page.current - 1}`))
+      = page.current - 1
+    a.page-nav__button.current
+      = page.current
+    a.page-nav__button(href=url_for(`/page/${page.total}`))
+      = page.total
+  else if (page.current === page.total)
+    a.page-nav__button(href=url_for('/'))
+      | 1
+    .page-nav__kebab
+      img(src='/img/kebab-horizontal.svg')
+    a.page-nav__button(href=url_for(`/page/${page.current - 2}`))
+      = page.current - 2
+    a.page-nav__button(href=url_for(`/page/${page.current - 1}`))
+      = page.current - 1
+    a.page-nav__button.current
+      = page.current
+  else
+    a.page-nav__button(href=url_for('/'))
+      | 1
+    .page-nav__kebab
+      img(src='/img/kebab-horizontal.svg')
+    a.page-nav__button(href=url_for(`/page/${page.current - 1}`))
+      = page.current - 1
+    a.page-nav__button.current
+      = page.current
+    a.page-nav__button(href=url_for(`/page/${page.current + 1}`))
+      = page.current + 1
+    .page-nav__kebab
+      img(src='/img/kebab-horizontal.svg')
+    a.page-nav__button(href=url_for(`/page/${page.total}`))
+      = page.total
