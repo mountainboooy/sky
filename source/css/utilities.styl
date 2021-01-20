@@ -4,6 +4,14 @@
   }
 }
 
+.visible-xs {
+  display: none;
+  
+  +responsive(xs) {
+    display: block;
+  }
+}
+
 .hidden-sm {
   +responsive(sm) {
     display: none;
