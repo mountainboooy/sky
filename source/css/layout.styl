@@ -44,6 +44,10 @@ html {
     max-width: 100%;
     padding: 0 1.5rem;
   }
+
+  &--body {
+    padding-bottom: 4rem;
+  }
 }
 
 .col {
@@ -75,11 +79,19 @@ html {
     color: primary-color;
     font-family: en-font-family;
     font-size: 22px;
-    margin: 1.5rem 0 1.5rem;
+    margin: 1.5rem 0;
+
+    &:first-of-type {
+      margin-top: 0;
+    }
   }
 
   +responsive-over(lg) {
     padding-left: 1.5rem;
+  }
+
+  +responsive(xs) {
+    margin-top: 4rem;
   }
 
   > *:not(:last-child) {
