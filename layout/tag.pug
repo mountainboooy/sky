@@ -1,4 +1,9 @@
-.tag 
-  .container
-    H1.tag-title= page.tag
-    != partial('./partial/archive', {page: page})
+.container.container--body
+  .tag-spacer
+  .col
+    .main-col
+      H1.tag-title= page.tag
+      != partial('./partial/archive', {page: page})
+    .side-col
+      != partial('./partial/popular-posts', {page: page})
+      != partial('./partial/tags-list')
