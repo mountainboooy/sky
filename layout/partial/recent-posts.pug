@@ -1,0 +1,16 @@
+div
+  h3.side-col__title Recent Posts
+  ul.popular-posts
+    - site.posts.sort('date', -1).limit(5).each(function (post) {
+      li.popular-posts-item
+        .popular-posts-date
+          = date(post.date, 'YYYY-M-D')
+        .popular-posts-img
+          img(src=post.thumbnail)
+        .popular-posts-title
+          h3
+            a(href=url_for(post.path) title=post.title)
+              = post.title
+      
+    - })
+    
