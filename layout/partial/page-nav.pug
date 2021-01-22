@@ -12,7 +12,7 @@
         | 3
     if (page.total > 4)
       .page-nav__kebab
-        img(src='/img/kebab-horizontal.svg')
+        img(src='/img/kebab_horizontal.svg')
     if (page.total > 3)
       a.page-nav__button(href=url_for(`${pagePath}${page.total}`))
         = page.total
@@ -24,7 +24,7 @@
     a.page-nav__button(href=url_for(`${pagePath}3`))
       | 3
     .page-nav__kebab
-      img(src='/img/kebab-horizontal.svg')
+      img(src='/img/kebab_horizontal.svg')
     a.page-nav__button(href=url_for(`${pagePath}${page.total}`))
       = page.total
   else if (page.current === 3)
@@ -37,14 +37,14 @@
     a.page-nav__button(href=url_for(`${pagePath}4`))
       | 4
     .page-nav__kebab
-      img(src='/img/kebab-horizontal.svg')
+      img(src='/img/kebab_horizontal.svg')
     a.page-nav__button(href=url_for(`${pagePath}${page.total}`))
       = page.total
   else if (page.current === page.total - 2)
     a.page-nav__button(href=url_for(rootPath))
       | 1
     .page-nav__kebab
-      img(src='/img/kebab-horizontal.svg')
+      img(src='/img/kebab_horizontal.svg')
     a.page-nav__button(href=url_for(`${pagePath}${page.current - 1}`))
       = page.current - 1
     a.page-nav__button.current
@@ -57,7 +57,7 @@
     a.page-nav__button(href=url_for(rootPath))
       | 1
     .page-nav__kebab
-      img(src='/img/kebab-horizontal.svg')
+      img(src='/img/kebab_horizontal.svg')
     a.page-nav__button(href=url_for(`${pagePath}${page.current - 1}`))
       = page.current - 1
     a.page-nav__button.current
@@ -68,7 +68,7 @@
     a.page-nav__button(href=url_for(rootPath))
       | 1
     .page-nav__kebab
-      img(src='/img/kebab-horizontal.svg')
+      img(src='/img/kebab_horizontal.svg')
     a.page-nav__button(href=url_for(`${pagePath}${page.current - 2}`))
       = page.current - 2
     a.page-nav__button(href=url_for(`${pagePath}${page.current - 1}`))
@@ -79,7 +79,7 @@
     a.page-nav__button(href=url_for(rootPath))
       | 1
     .page-nav__kebab
-      img(src='/img/kebab-horizontal.svg')
+      img(src='/img/kebab_horizontal.svg')
     a.page-nav__button(href=url_for(`${pagePath}${page.current - 1}`))
       = page.current - 1
     a.page-nav__button.current
@@ -87,6 +87,6 @@
     a.page-nav__button(href=url_for(`${pagePath}${page.current + 1}`))
       = page.current + 1
     .page-nav__kebab
-      img(src='/img/kebab-horizontal.svg')
+      img(src='/img/kebab_horizontal.svg')
     a.page-nav__button(href=url_for(`${pagePath}${page.total}`))
       = page.total
