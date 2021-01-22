@@ -17,6 +17,22 @@
     }
   }
 
+  &__rank {
+    position: absolute;
+    top: 12px;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    background: primary-color;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    font-family: en-font-family;
+    font-weight: bold;
+  }
+
   &-date {
     position: absolute;
     top: 12px;
@@ -28,8 +44,14 @@
     font-family: en-font-family;
   }
 
-  &-item:first-child .popular-posts-date {
-    top: 0;
+  &-item:first-child {
+    .popular-posts-date {
+      top: 0;
+    }
+
+    .popular-posts__rank {
+      top: 0;
+    }
   }
 
   &-title {

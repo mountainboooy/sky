@@ -6,6 +6,12 @@
     padding-top: 2rem;
     padding-bottom: 2rem;
   }
+
+  .col {
+    +responsive(xll) {
+      grid-template-columns: 8fr 4fr;
+    }
+  }
 }
 
 .post-col {
