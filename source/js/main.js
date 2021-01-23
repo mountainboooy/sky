@@ -15,7 +15,7 @@ function addRank () {
   items.forEach((item, i) => {
     const rankElement = document.createElement('div')
     rankElement.classList = 'popular-posts__rank'
-    rankElement.innerHTML = i
+    rankElement.innerHTML = i + 1
     item.append(rankElement)
   })
 }
