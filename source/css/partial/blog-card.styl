@@ -1,0 +1,83 @@
+.blog-card {
+  border: 1px solid border-color;
+  max-width: 480px;
+  margin-bottom: 2rem;
+
+  .hbc-card {
+    position: relative;
+  }
+
+  .hbc-link {
+    text-decoration: none;
+    color: text-color;
+    line-height: 1.5rem;
+
+    &:hover {
+      color: link-hover-color;
+    }
+  }
+
+  .hbc-info { // faiconとブログ名
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 136px;
+    top: 12px;
+
+    +responsive(xs) {
+      left: 112px;
+      top: 8px;
+    }
+  }
+
+  .hbc-site-name {
+    font-size: 14px;
+    line-height: 1.5rem;
+    color: gray;
+    margin-left: 8px;
+  }
+
+  .hbc-contents { // 写真とサマリー
+    display: flex;
+  }
+
+  .hbc-thumbnail {
+    flex: 0 0 120px;
+    height: 120px;
+
+    +responsive(xs) {
+      flex: 0 0 96px;
+      height: 96px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .hbc-text {
+    padding: 44px 16px 0;
+    font-size: 15px;
+
+    +responsive(xs) {
+      padding-top: 36px;
+    }
+  }
+
+  .hbc-title {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .hbc-description {
+    display: none;
+  }
+
+  .hbc-url {
+    display: none;
+  }
+}
