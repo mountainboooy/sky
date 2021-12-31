@@ -18,7 +18,8 @@
         
       .post-col     
         // article
-        != partial('./partial/article', {content: page.content})      
+        != partial('./partial/article', {content: page.content}) 
+        != partial('./partial/disqus')     
         != partial('./partial/related-posts', {page: page} )
     .side-col
       != partial('./partial/popular-posts', {page: page})
